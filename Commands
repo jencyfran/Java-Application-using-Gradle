@@ -1,0 +1,83 @@
+Last login: Fri Aug  4 11:48:18 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Jencys-MacBook-Air:~ jency$ mkdir demo
+Jencys-MacBook-Air:~ jency$ cd demo
+Jencys-MacBook-Air:demo jency$ gradle init
+
+Select type of project to generate:
+  1: basic
+  2: application
+  3: library
+  4: Gradle plugin
+Enter selection (default: basic) [1..4] 2
+
+Select implementation language:
+  1: C++
+  2: Groovy
+  3: Java
+  4: Kotlin
+  5: Scala
+  6: Swift
+Enter selection (default: Java) [1..6] 3
+
+Generate multiple subprojects for application? (default: no) [yes, no] no
+Select build script DSL:
+  1: Kotlin
+  2: Groovy
+Enter selection (default: Kotlin) [1..2] 1
+
+Select test framework:
+  1: JUnit 4
+  2: TestNG
+  3: Spock
+  4: JUnit Jupiter
+Enter selection (default: JUnit Jupiter) [1..4] 1
+
+Project name (default: demo): demo
+Source package (default: demo): demo
+Enter target version of Java (min. 7) (default: 20): 20
+Generate build using new APIs and behavior (some features may change in the nex^[[C^[[C
+
+
+> Task :init
+To learn more about Gradle by exploring our Samples at https://docs.gradle.org/8.2.1/samples/sample_building_java_applications.html
+
+BUILD SUCCESSFUL in 58s
+2 actionable tasks: 2 executed
+Jencys-MacBook-Air:demo jency$ ls
+app			gradlew			settings.gradle.kts
+gradle			gradlew.bat
+Jencys-MacBook-Air:demo jency$ ./gradlew run
+Deleting directory /Users/jency/.gradle/wrapper/dists/gradle-8.2.1-bin/5hap6b9n41hkg4jeh2au2pllh/gradle-8.2.1
+Starting a Gradle Daemon, 1 incompatible Daemon could not be reused, use --status for details
+
+> Task :app:run
+Hello World!
+
+BUILD SUCCESSFUL in 2m 4s
+2 actionable tasks: 2 executed
+Jencys-MacBook-Air:demo jency$ ./gradle build
+-bash: ./gradle: is a directory
+Jencys-MacBook-Air:demo jency$ ./gradlew build
+
+BUILD SUCCESSFUL in 6s
+7 actionable tasks: 6 executed, 1 up-to-date
+Jencys-MacBook-Air:demo jency$ ./gradlew build --scan
+
+BUILD SUCCESSFUL in 10s
+7 actionable tasks: 7 up-to-date
+Resolving local hostname is slow, see https://gradle.com/help/gradle-slow-host-name
+
+Publishing a build scan to scans.gradle.com requires accepting the Gradle Terms of Service defined at https://gradle.com/terms-of-service. Do you accept these terms? [yes, no] yes
+
+Gradle Terms of Service accepted.
+
+Publishing build scan...
+https://gradle.com/s/27ionidesqqcs
+
+Jencys-MacBook-Air:demo jency$ 
+
+
